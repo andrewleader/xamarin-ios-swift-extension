@@ -7,7 +7,6 @@
     <SupportedOSPlatformVersion>14.0</SupportedOSPlatformVersion>
     <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <CodesignProvision>iOS Team Provisioning Profile: com.xamarin.sample.TestApplication</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <AdditionalAppExtensions Include="$(MSBuildProjectDirectory)/../../../SwiftExtension/TestNativeApp">
