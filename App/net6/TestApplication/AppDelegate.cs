@@ -28,8 +28,10 @@ public class AppDelegate : UIApplicationDelegate {
 	{
 		WidgetUpdateTask = new SimpleBackgroundTask ("com.xamarin.sample.TestApplication.UpdateWidget", WriteWidgetState, verbose: true);
 		WidgetUpdateTask.Schedule ();
+		#if DEBUG
 		// This is a debugging aid, forcing an update after 5 seconds
 		WidgetUpdateTask.ScheduleForceRefresh (5000);
+		#endif
 
 		// create a new window instance based on the screen size
 		Window = new UIWindow (UIScreen.MainScreen.Bounds);
