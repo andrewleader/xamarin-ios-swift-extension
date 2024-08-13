@@ -16,7 +16,7 @@ struct Datum: Codable {
 }
 
 func readTestData() -> Values {
-    if let url = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.xamarin.sample.TestApplication") {
+    if let url = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.xamarin.sample.LeaderTestApp") {
         let path = url.appendingPathComponent("testAppState.json");
         let data = try? String(contentsOf: path);
         if let data = data {

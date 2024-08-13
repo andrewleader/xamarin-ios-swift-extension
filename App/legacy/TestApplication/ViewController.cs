@@ -22,7 +22,7 @@ namespace TestApplication
 			text.Text = "Before";
 			View.AddSubview (text);
 
-			NSUrl url = NSFileManager.DefaultManager.GetContainerUrl ("group.com.xamarin.sample.TestApplication");
+			NSUrl url = NSFileManager.DefaultManager.GetContainerUrl ("group.com.xamarin.sample.LeaderTestApp");
 			url = url.Append ("testAppState.json", false);
 			System.IO.File.WriteAllText (url.Path, TestData.GetJson ());
 

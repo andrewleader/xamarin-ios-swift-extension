@@ -26,7 +26,7 @@ public class AppDelegate : UIApplicationDelegate {
 	// only on background updating of your shared state
 	public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
 	{
-		WidgetUpdateTask = new SimpleBackgroundTask ("com.xamarin.sample.TestApplication.UpdateWidget", WriteWidgetState, verbose: true);
+		WidgetUpdateTask = new SimpleBackgroundTask ("com.xamarin.sample.LeaderTestApp.UpdateWidget", WriteWidgetState, verbose: true);
 		WidgetUpdateTask.Schedule ();
 		#if DEBUG
 		// This is a debugging aid, forcing an update after 5 seconds
@@ -58,7 +58,7 @@ public class AppDelegate : UIApplicationDelegate {
 
 	void WriteWidgetState ()
 	{
-		NSUrl url = NSFileManager.DefaultManager.GetContainerUrl ("group.com.xamarin.sample.TestApplication");
+		NSUrl url = NSFileManager.DefaultManager.GetContainerUrl ("group.com.xamarin.sample.LeaderTestApp");
 		url = url.Append ("testAppState.json", false);
 		System.IO.File.WriteAllText (url.Path, TestData.GetJson ());
 		ReloadWidgets ();
