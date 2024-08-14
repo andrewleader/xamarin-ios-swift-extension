@@ -8,6 +8,11 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <ForceSimulatorX64ArchitectureInIDE>true</ForceSimulatorX64ArchitectureInIDE>
+    <CreatePackage>false</CreatePackage>
+    <RuntimeIdentifier>iossimulator-x64</RuntimeIdentifier>
+  </PropertyGroup>
   <ItemGroup>
     <AdditionalAppExtensions Include="$(MSBuildProjectDirectory)/../../../SwiftExtension/TestNativeApp">
       <Name>NativeWidgetExtension</Name>
